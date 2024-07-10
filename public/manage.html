@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Patients</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="../image/logo.jpg" alt="logo" ></a>
+        <nav>
+            <ul>
+                <li><a href="consultations.html">Recent Consultations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Patient Information</h2>
+        <form id="patientForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <label for="number">Patient Number:</label>
+            <input type="text" id="number" name="number" required>
+            <label for="consultationDay">Day of Consultation:</label>
+            <input type="date" id="consultationDay" name="consultationDay" required>
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+    <table id="patientTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>First Name</th>
+                <th>Age</th>
+                <th>Comment</th>
+                <th>Patient Number</th>
+                <th>Day of Consultation</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="patientList">
+            <!-- Patients seront ajoutés dynamiquement ici -->
+        </tbody>
+    </table>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
