@@ -3,23 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recent Consultations</title>
+    <title>Consultaions récents</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Recent Consultations</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="manage.html">Manage Patients</a></li>
+                <!--<li><a href="index.html">Rétour au Connexion</a></li>-->
+                <li><a href="manage.html">Gérer des patietns</a></li>
+                <li><a href="index.html">Deconnexion</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Consultation List</h2>
-        <div id="consultationList"></div>
+ 
+    <main class="contenuTable">
+        <h2>Liste de consultaion</h2>
+        <div class="table-container">
+            <table id="patientTable">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenoms</th>
+                        <th>Age</th>
+                        <th>Commentaire</th>
+                        <th>Numero du patients</th>
+                        <th>Jour de consultation</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="patientList">
+                    
+                </tbody>
+            </table>
+        </div>
     </main>
+
+   
+    <div id="popupForm" class="popup">
+        <form id="editPatientForm">
+            <label for="name">Noms:</label>
+            <input type="text" id="editName" name="name" required>
+            <label for="firstName">Prenoms:</label>
+            <input type="text" id="editFirstName" name="firstName" required>
+            <label for="age">Age:</label>
+            <input type="number" id="editAge" name="age" required>
+            <label for="comment">Commentaire:</label>
+            <textarea id="editComment" name="comment"></textarea>
+            <label for="number">Numero du patients</label>
+            <input type="text" id="editNumber" name="number" required>
+            <label for="consultationDay">Jour de consultaition:</label>
+            <input type="date" id="editConsultationDay" name="consultationDay" required>
+            <button type="submit">Modifier</button>
+            <button type="button" id="closePopup">Annuler</button>
+        </form>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
